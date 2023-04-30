@@ -3,11 +3,12 @@ name: Python Package using Conda
 on: [push]
 
 jobs:
-  build-linux:
-    runs-on: windows-latest
+  build-main:
+    runs-on: ${{ matrix.os }}
     strategy:
       matrix:
         python-version: ["3.8", "3.9", "3.10"]
+        os: ["ubuntu-latest", "windows-latest"]
       max-parallel: 5
 
     steps:
