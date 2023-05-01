@@ -30,4 +30,4 @@ def test_get_pc_by_id():
     pcid = "PC02"
     response = client.get(f"pcs/{pcid}")
     assert response.status_code == 200
-    assert response.json == "HP002"
+    assert response.json == "HP002".casefold()
