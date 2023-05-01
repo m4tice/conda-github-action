@@ -43,7 +43,12 @@ dependencies:
   - greenlet=1.1.1=py38hd77b12b_0
   - gspread=5.3.0=pyh6c4a22f_0
   - h11=0.14.0=pyhd8ed1ab_0
+  - h2=4.1.0=py38haa244fe_0
+  - hpack=4.0.0=pyh9f0ad1d_0
+  - httpcore=0.17.0=pyhd8ed1ab_0
   - httplib2=0.20.4=pyhd8ed1ab_0
+  - httpx=0.24.0=pyhd8ed1ab_1
+  - hyperframe=6.0.1=pyhd8ed1ab_0
   - icu=69.1=h0e60522_0
   - idna=3.3=pyhd8ed1ab_0
   - importlib-metadata=4.11.3=py38haa95532_0
