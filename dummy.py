@@ -13,6 +13,9 @@ def addition(first_number: int, second_number: int):
 
 
 DEVICES = ["device_01", "device_02", "device_03"]
+PCS = {"PC01" : "HP001",
+       "PC02" : "HP002",
+       "PC03" : "HP003"}
 
 app = FastAPI()
 
@@ -23,3 +26,10 @@ async def get_devices():
     get all devices
     """
     return DEVICES
+
+@app.get("/pcs/{pcid}")
+async def get_pc_by_id(pcid: str):
+    """
+    return PC by id
+    """
+    return PCS[pcid]

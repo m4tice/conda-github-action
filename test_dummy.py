@@ -10,6 +10,7 @@ def test_addition():
     """
     assert dummy.addition(1, 2) == 3
 
+
 client = TestClient(dummy.app)
 
 
@@ -20,3 +21,13 @@ def test_get_device():
     response = client.get("/devices")
     assert response.status_code == 200
     assert response.json() == ["device_01","device_02","device_03"]
+
+
+def test_get_pc_by_id():
+    """
+    test get pc by id
+    """
+    pcid = "PC02"
+    response = client.get(f"pcs/{pcid}")
+    assert response.status_code == 200
+    assert response.json == "HP002"
