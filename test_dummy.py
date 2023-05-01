@@ -10,8 +10,7 @@ def test_addition():
     """
     assert dummy.addition(1, 2) == 3
 
-app = dummy.app()
-client = TestClient(app)
+client = TestClient(dummy.app)
 
 
 def test_get_device():
