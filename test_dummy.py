@@ -19,6 +19,7 @@ def test_get_device():
     test get devices
     """
     response = client.get("/devices")
+    print("guu8hc::guu8hc", response.json)
     assert response.status_code == 200
     assert response.json() == ["device_01","device_02","device_03"]
 
@@ -27,7 +28,8 @@ def test_get_pc_by_id():
     """
     test get pc by id
     """
-    pcid = "PC02"
+    pcid = 'PC02'
     response = client.get(f"pcs/{pcid}")
+    print("guu8hc::", response.json)
     assert response.status_code == 200
-    assert response.json == "HP002".casefold()
+    assert response.json() == 'HP002'
